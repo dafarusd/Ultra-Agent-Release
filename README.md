@@ -76,9 +76,33 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.1.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.0.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.1.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.1.apk)** — 8.3 MB, free, no account.
 
-_Version 2.0.0 stays at [agent-ultra-2.0.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.0.0.apk) so older links keep working._
+### If you installed 2.0.0 or 2.1.0, please replace them
+
+Those two builds were signed with Android's **debug key** — a key that ships
+inside the Android SDK, which anyone can sign an app with. Android decides
+whether an update is genuine by checking the signature, so a stranger could
+have built an "update" to those versions and had it install straight over the
+top. Nothing of the sort is known to have happened, and both downloads have
+been removed.
+
+2.1.1 is signed with a real key held only by me. Because the signature is
+different, Android will not install it over the old one:
+
+1. Uninstall Agent Ultra.
+2. Install 2.1.1.
+3. Set your allowed apps and provider again — uninstalling clears them.
+
+You can check any build you download:
+
+```
+apksigner verify --print-certs agent-ultra-2.1.1.apk
+```
+
+It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
+`0d04510d51d67a43effa2b29b855e84b329fe73e16433896aa5145e151ca241f`. Anything
+else did not come from me.
 
 Allow the install when Android asks, then open it.
 
