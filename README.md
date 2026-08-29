@@ -18,7 +18,7 @@ apps' user interfaces. With the network off, it still works.
 ## What it actually does
 
 - **Runs on-device.** Pick a model that fits your phone and it downloads on
-  demand. Nothing is bundled — the APK is 15 MB. Airplane mode, Wi-Fi off, no
+  demand. Nothing is bundled — the APK is 8.3 MB. Airplane mode, Wi-Fi off, no
   SIM: it still answers and still operates the phone.
 - **Drives any app you allow.** It reads the screen through Android's
   accessibility tree and acts on it — taps, typing, scrolling, navigation.
@@ -76,7 +76,9 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.0.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.0.0.apk)** — 15 MB, free, no account.
+**[agent-ultra-2.1.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.0.apk)** — 8.3 MB, free, no account.
+
+_Version 2.0.0 stays at [agent-ultra-2.0.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.0.0.apk) so older links keep working._
 
 Allow the install when Android asks, then open it.
 
