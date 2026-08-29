@@ -78,31 +78,8 @@ which model it was.
 
 **[agent-ultra-2.1.3.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.3.apk)** — 8.3 MB, free, no account.
 
-### If you installed 2.0.0 or 2.1.0, please replace them
-
-Those two builds were signed with Android's **debug key** — a key that ships
-inside the Android SDK, which anyone can sign an app with. Android decides
-whether an update is genuine by checking the signature, so a stranger could
-have built an "update" to those versions and had it install straight over the
-top. Nothing of the sort is known to have happened, and both downloads have
-been removed.
-
-2.1.3 is signed with a real key held only by me. Because the signature is
-different, Android will not install it over the old one:
-
-1. Uninstall Agent Ultra.
-2. Install 2.1.3.
-3. Set your allowed apps and provider again — uninstalling clears them.
-
-You can check any build you download:
-
-```
-apksigner verify --print-certs agent-ultra-2.1.3.apk
-```
-
-It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
-`0d04510d51d67a43effa2b29b855e84b329fe73e16433896aa5145e151ca241f`. Anything
-else did not come from me.
+*Already running 2.0.0 or 2.1.0? Uninstall first — see [withdrawn
+versions](#withdrawn-versions) at the bottom. Everyone else, carry straight on.*
 
 ## Setting it up
 
@@ -136,8 +113,10 @@ If you would rather check than trust, the fingerprint above is what it is for.
 
 **2. Turn on the accessibility service. Nothing works before this.** Open the
 app and tap the red **agent: a11y off** at the top; it takes you straight to
-Android's accessibility screen. Find Agent Ultra under installed apps or
-downloaded apps and switch it on. Android will warn you that the service can
+Android's accessibility screen. On a Samsung the path from there is
+**Installed apps → Agent Ultra**, where it will read *Off*; other makers word
+that middle step differently — look for downloaded, installed or downloaded
+services. Android will warn you that the service can
 observe and act on your screen. It can — that is how it reads and drives other
 apps, and it is why the next step exists.
 
@@ -200,3 +179,35 @@ research it is built on is public: [github.com/dafarusd/gate](https://github.com
 ---
 
 **[@Dafarusd on X](https://x.com/Dafarusd)** · Copyright (c) 2026 Dafarus
+
+---
+
+## Withdrawn versions
+
+**2.0.0 and 2.1.0 have been removed.** If you are running either, uninstall it
+before installing 2.1.3 — Android will refuse the update otherwise, and will
+not tell you why.
+
+Both were signed with Android's **debug key** — a key that ships
+inside the Android SDK, which anyone can sign an app with. Android decides
+whether an update is genuine by checking the signature, so a stranger could
+have built an "update" to those versions and had it install straight over the
+top. Nothing of the sort is known to have happened, and both downloads have
+been removed.
+
+2.1.3 is signed with a real key held only by me. Because the signature is
+different, Android will not install it over the old one:
+
+1. Uninstall Agent Ultra.
+2. Install 2.1.3.
+3. Set your allowed apps and provider again — uninstalling clears them.
+
+You can check any build you download:
+
+```
+apksigner verify --print-certs agent-ultra-2.1.3.apk
+```
+
+It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
+`0d04510d51d67a43effa2b29b855e84b329fe73e16433896aa5145e151ca241f`. Anything
+else did not come from me.
