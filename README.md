@@ -110,10 +110,29 @@ Requires Android 8.0 or newer, arm64. Nothing here is optional except where it
 says so, and none of it can be skipped by the app on your behalf — Android
 gives these decisions to you, which is the point.
 
-**1. Install it.** Your browser will warn that it did not come from the Play
-Store and ask whether to allow installs from it. That warning is correct: check
-the fingerprint above if you want to be sure. Google Play Protect may then
-offer to send the app to Google for a security check — either answer is fine.
+**1. Install it.** Android will try to stop you four times. This is what an app
+from outside the Play Store looks like, and none of it means anything is wrong —
+but the wording is alarming and one of the buttons quietly gives up, so here is
+the whole path, screen by screen. Walked on a real phone, in this order:
+
+| You will see | What to tap |
+|---|---|
+| **"File might be harmful"** | **Download anyway** |
+| **"Permission required"** — your browser is not allowed to install apps | **Settings**, turn on **Allow permission**, then come back and tap the download again |
+| **"Install this app?"** | **Install** |
+| **"App blocked to protect your device"** — *"Play Protect hasn't seen an app from this developer before."* | **More details**, then the small **Install anyway** link |
+
+**That last one is the step people give up on.** The big obvious button says
+**Got it**, and tapping it cancels the install. The way through is the quiet
+link underneath.
+
+Play Protect is telling the truth, and it is worth understanding rather than
+just clicking past. It is not saying the app is dangerous. It is saying it has
+never seen it before, which is true: it is a new app, downloaded from a page
+rather than a shop, and Google has nothing on file about it. Every app that is
+not in the Play Store gets this, on the first install, forever.
+
+If you would rather check than trust, the fingerprint above is what it is for.
 
 **2. Turn on the accessibility service. Nothing works before this.** Open the
 app and tap the red **agent: a11y off** at the top; it takes you straight to
