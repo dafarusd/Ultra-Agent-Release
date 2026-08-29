@@ -87,11 +87,11 @@ have built an "update" to those versions and had it install straight over the
 top. Nothing of the sort is known to have happened, and both downloads have
 been removed.
 
-2.1.1 is signed with a real key held only by me. Because the signature is
+2.1.2 is signed with a real key held only by me. Because the signature is
 different, Android will not install it over the old one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.1.1.
+2. Install 2.1.2.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
