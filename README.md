@@ -76,7 +76,7 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.1.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.1.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.1.2.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.2.apk)** — 8.3 MB, free, no account.
 
 ### If you installed 2.0.0 or 2.1.0, please replace them
 
@@ -97,23 +97,69 @@ different, Android will not install it over the old one:
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.1.1.apk
+apksigner verify --print-certs agent-ultra-2.1.2.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
 `0d04510d51d67a43effa2b29b855e84b329fe73e16433896aa5145e151ca241f`. Anything
 else did not come from me.
 
-Allow the install when Android asks, then open it.
+## Setting it up
 
-1. **Settings → WHERE THE AGENT MAY GO** — tick the apps it may enter. Nothing
-   is reachable until you do.
-2. **Settings → AI PROVIDER** — any OpenAI-compatible endpoint.
-3. **Settings → ON-DEVICE MODEL** — the list is scored against *your* phone's
-   memory: fits comfortably, tight, or too big.
-4. Enable the accessibility service when prompted.
+Requires Android 8.0 or newer, arm64. Nothing here is optional except where it
+says so, and none of it can be skipped by the app on your behalf — Android
+gives these decisions to you, which is the point.
 
-Requires Android 8.0 or newer, arm64.
+**1. Install it.** Your browser will warn that it did not come from the Play
+Store and ask whether to allow installs from it. That warning is correct: check
+the fingerprint above if you want to be sure. Google Play Protect may then
+offer to send the app to Google for a security check — either answer is fine.
+
+**2. Turn on the accessibility service. Nothing works before this.** Open the
+app and tap the red **agent: a11y off** at the top; it takes you straight to
+Android's accessibility screen. Find Agent Ultra under installed apps or
+downloaded apps and switch it on. Android will warn you that the service can
+observe and act on your screen. It can — that is how it reads and drives other
+apps, and it is why the next step exists.
+
+The label turns to **agent: ready** when it has worked.
+
+**3. Give it a brain.** One of:
+
+- **Settings → AI PROVIDER** — any OpenAI-compatible endpoint and key. You
+  need an account with whichever provider you choose; the app itself needs
+  none.
+- **Settings → ON-DEVICE MODEL** — pick one and download it. The list is
+  scored against your phone's memory: fits comfortably, tight, or too big. This
+  path needs no account and no network once the file is down.
+
+**4. Choose which apps it may enter.** **Settings → WHERE THE AGENT MAY GO →
+Choose allowed apps.** It starts with nothing ticked and can see nothing until
+you tick something. Search for an app by name; the list marks anything that
+looks like banking, health or a password manager.
+
+**5. Allow the parts you want.** **Settings → PERMISSIONS ANDROID CONTROLS.**
+Voice, camera, texts, contacts, calendar, location and notifications all start
+refused, and the matching features do nothing until you allow them. Each has an
+Allow button, or take them all at once.
+
+Allowing one of these does **not** let the agent use it. Step 4 and the
+personal-data switch still decide that. This only decides whether the phone
+lets the app try at all.
+
+**6. Optional — messages, contacts and location.** **Settings → PERSONAL
+DATA.** Off by default. These read Android's own databases rather than the
+screen, so the app list in step 4 does not cover them.
+
+**7. Optional — reading notifications.** In the same permissions section, next
+to **Reading notifications**, tap Open. Android keeps this one on a screen of
+its own and no app is allowed to ask for it directly.
+
+### If something does nothing at all
+
+Almost always step 2 or step 5. The status at the top of the chat screen says
+whether the service is running, and the permissions section says in words which
+capabilities the phone is currently refusing.
 
 ## Honest limits
 
