@@ -76,7 +76,7 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.1.2.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.2.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.1.3.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.3.apk)** — 8.3 MB, free, no account.
 
 ### If you installed 2.0.0 or 2.1.0, please replace them
 
@@ -87,17 +87,17 @@ have built an "update" to those versions and had it install straight over the
 top. Nothing of the sort is known to have happened, and both downloads have
 been removed.
 
-2.1.2 is signed with a real key held only by me. Because the signature is
+2.1.3 is signed with a real key held only by me. Because the signature is
 different, Android will not install it over the old one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.1.2.
+2. Install 2.1.3.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.1.2.apk
+apksigner verify --print-certs agent-ultra-2.1.3.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
