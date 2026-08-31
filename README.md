@@ -27,9 +27,16 @@ apps' user interfaces. With the network off, it still works.
   rather than to whichever line happened to be nearby.
 - **Speaks and listens.** Hold the side button, talk, put the phone down, hear
   the answer. Transcription is on-device.
+- **Learns a route by watching you do it once.** Say "watch me", do the task on
+  your phone, then name it. The first time it replays, it works out for itself
+  which control opens each screen; after that it goes straight there. On a real
+  phone that took a route from eight taps down to two.
+- **Tells you what it actually knows.** Ask for your routines and each one says
+  whether it has ever done the job itself or only watched you do it — and if a
+  control it had learned has since moved, it says the app has changed.
 - **Remembers what worked.** A task that succeeds is recorded with its
   arguments; ask the same thing in different words later and it recalls the
-  approach. Name a run and it becomes a routine you can replay.
+  approach.
 
 ## What it will not do
 
@@ -45,6 +52,19 @@ This is the part worth reading.
   send, transfer, delete, subscribe. Both indexed and raw-coordinate taps, so
   the check cannot be sidestepped by choosing coordinates. An unanswered prompt
   is a refusal, never an approval.
+- **It stops when the screen disagrees with you.** Ask it to pay 240 on a screen
+  showing 2,400 and it does not ask you to confirm — it stops before pressing
+  anything and tells you both numbers. A confirmation you have approved fifty
+  times gets approved the fifty-first without being read, so where it can tell
+  something is wrong it refuses rather than asking.
+- **A code stays in the app it came from.** A one-time code or card number read
+  on one screen cannot be typed, copied, messaged or saved anywhere else.
+  Anything not explicitly cleared to carry it is refused, so a way out that
+  nobody thought of is refused by default.
+- **It will not press pay, send or delete to find its way.** While working out
+  the next step of a routine it only tries controls it can undo. A guess is not
+  a reason to ask you to approve a payment; if a route ends behind such a
+  button, it stops and says so.
 - **It cannot pass your fingerprint or PIN.** Anything behind one ends with the
   phone in your hand.
 - **Notification logging is off by default** and never records a protected app.
@@ -76,7 +96,7 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.1.3.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.1.3.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.2.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.2.0.apk)** — 8.3 MB, free, no account.
 
 *Already running 2.0.0 or 2.1.0? Uninstall first — see [withdrawn
 versions](#withdrawn-versions) at the bottom. Everyone else, carry straight on.*
@@ -162,7 +182,13 @@ capabilities the phone is currently refusing.
 ## Honest limits
 
 - In-app navigation handles direct tasks well and still struggles with long
-  multi-step flows inside unfamiliar apps.
+  multi-step flows inside unfamiliar apps. Teaching it a route is the reliable
+  path; asking it to work out something new in an app it has never seen is not.
+- Learning a route by watching has been proven in a browser, which is the hard
+  case — a browser reuses one window and reports almost nothing about what you
+  tapped. Other apps should be easier, and have had far less exercise.
+- The check that stops a payment mismatch reads amounts of money. A wrong
+  recipient, a wrong date or a wrong quantity is not caught by it.
 - Structured extraction reads *ordered* fields. It knows which lines belong to
   one item; it does not label which is the title and which is the rating.
 - Some apps detect accessibility services and refuse to run. That is their
@@ -185,7 +211,7 @@ research it is built on is public: [github.com/dafarusd/gate](https://github.com
 ## Withdrawn versions
 
 **2.0.0 and 2.1.0 have been removed.** If you are running either, uninstall it
-before installing 2.1.3 — Android will refuse the update otherwise, and will
+before installing 2.2.0 — Android will refuse the update otherwise, and will
 not tell you why.
 
 Both were signed with Android's **debug key** — a key that ships
@@ -195,17 +221,17 @@ have built an "update" to those versions and had it install straight over the
 top. Nothing of the sort is known to have happened, and both downloads have
 been removed.
 
-2.1.3 is signed with a real key held only by me. Because the signature is
+2.2.0 is signed with a real key held only by me. Because the signature is
 different, Android will not install it over the old one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.1.3.
+2. Install 2.2.0.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.1.3.apk
+apksigner verify --print-certs agent-ultra-2.2.0.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
