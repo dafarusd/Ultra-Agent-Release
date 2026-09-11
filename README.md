@@ -96,11 +96,11 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.3.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.3.0.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.3.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.3.1.apk)** — 8.3 MB, free, no account.
 
-*Running 2.2.0? Install straight over — same signing key. Running 2.0.0 or
-2.1.0? Uninstall first — see [withdrawn versions](#withdrawn-versions) at the
-bottom.*
+*Running 2.2.0? Install straight over — same signing key. Running 2.0.0, 2.1.0
+or 2.3.0? Uninstall first — see [withdrawn versions](#withdrawn-versions) at
+the bottom.*
 
 ## Setting it up
 
@@ -211,30 +211,47 @@ research it is built on is public: [github.com/dafarusd/gate](https://github.com
 
 ## Withdrawn versions
 
-**2.0.0 and 2.1.0 have been removed.** If you are running either, uninstall it
-before installing 2.2.0 — Android will refuse the update otherwise, and will
-not tell you why.
+**2.0.0, 2.1.0 and 2.3.0 have been removed.** If you are running any of them,
+uninstall it before installing 2.3.1 — Android will refuse the update
+otherwise, and will not tell you why.
 
-Both were signed with Android's **debug key** — a key that ships
+All three were signed with Android's **debug key** — a key that ships
 inside the Android SDK, which anyone can sign an app with. Android decides
 whether an update is genuine by checking the signature, so a stranger could
 have built an "update" to those versions and had it install straight over the
-top. Nothing of the sort is known to have happened, and both downloads have
-been removed.
+top. Nothing of the sort is known to have happened, and all three downloads
+have been removed.
 
-2.2.0 and later are signed with a real key held only by me. Because the
-signature is different, Android will not install them over the old ones:
+2.3.0 was caught on 11 September 2026, during a check of this page. The build
+file fell back to the debug key when the release key wasn't on the machine, so
+a release build produced a debug-signed APK that looked fine. That fallback is
+gone: a release build without the key now fails instead.
+
+2.1.3, 2.2.0 and 2.3.1 are signed with a real key held only by me. Because the
+signature is different, Android will not install them over a debug-signed one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.3.0.
+2. Install 2.3.1.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.3.0.apk
+apksigner verify --print-certs agent-ultra-2.3.1.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
 `0d04510d51d67a43effa2b29b855e84b329fe73e16433896aa5145e151ca241f`. Anything
 else did not come from me.
+
+---
+
+Built by Dafarus — local-first software and hardware you own.
+
+Follow the work on X: [@Dafarusd](https://x.com/Dafarusd)
+
+My companies:
+- Steel Valley Burners — [Facebook](https://www.facebook.com/steelvalleyburners)
+- Keephaven — [keephaven.co](https://keephaven.co) · [X](https://x.com/Keephaven) · [Facebook](https://www.facebook.com/profile.php?id=61592155452190)
+
+More work: [gate](https://github.com/dafarusd/gate) · [Sentinel](https://github.com/dafarusd/sentinel-public) · [Agent Ultra](https://github.com/dafarusd/Ultra-Agent-Release) · [EveryVoice](https://github.com/dafarusd/everyvoice) · [Mind Meld](https://github.com/dafarusd/mindmeld) · [monero-swap](https://github.com/dafarusd/monero-swap)
