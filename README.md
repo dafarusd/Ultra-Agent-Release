@@ -200,8 +200,9 @@ capabilities the phone is currently refusing.
 
 ## Source
 
-The source is private. The build is free to download and use, and the security
-research it is built on is public: [github.com/dafarusd/gate](https://github.com/dafarusd/gate)
+The source is public: [github.com/dafarusd/Ultra-Agent](https://github.com/dafarusd/Ultra-Agent).
+The build is free to download and use, and the security research it is built on
+is public too: [github.com/dafarusd/gate](https://github.com/dafarusd/gate)
 
 ---
 
