@@ -96,7 +96,7 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.3.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/raw/main/agent-ultra-2.3.1.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.3.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.1/agent-ultra-2.3.1.apk)** — 8.3 MB, free, no account.
 
 *Running 2.2.0? Install straight over — same signing key. Running 2.0.0, 2.1.0
 or 2.3.0? Uninstall first — see [withdrawn versions](#withdrawn-versions) at
