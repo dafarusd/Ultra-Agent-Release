@@ -251,8 +251,7 @@ Built by Dafarus — local-first software and hardware you own.
 
 Follow the work on X: [@Dafarusd](https://x.com/Dafarusd)
 
-My companies:
-- Steel Valley Burners — [Facebook](https://www.facebook.com/steelvalleyburners)
+My company:
 - Keephaven — [keephaven.co](https://keephaven.co) · [X](https://x.com/Keephaven) · [Facebook](https://www.facebook.com/profile.php?id=61592155452190)
 
 More work: [gate](https://github.com/dafarusd/gate) · [Sentinel](https://github.com/dafarusd/sentinel-public) · [Agent Ultra](https://github.com/dafarusd/Ultra-Agent-Release) · [EveryVoice](https://github.com/dafarusd/everyvoice) · [Mind Meld](https://github.com/dafarusd/mindmeld) · [monero-swap](https://github.com/dafarusd/monero-swap)
