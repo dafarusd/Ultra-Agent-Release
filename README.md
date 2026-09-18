@@ -96,9 +96,12 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.3.1.apk](https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.1/agent-ultra-2.3.1.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.3.2.apk](https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.2/agent-ultra-2.3.2.apk)** — 8.3 MB, free, no account.
 
-*Running 2.2.0? Install straight over — same signing key. Running 2.0.0, 2.1.0
+2.3.2: the safety gate now matches what you named as a whole word. Before, naming
+`alice@example.com` also let `ce@example.com` through.
+
+*Running 2.2.0 or 2.3.1? Install straight over — same signing key. Running 2.0.0, 2.1.0
 or 2.3.0? Uninstall first — see [withdrawn versions](#withdrawn-versions) at
 the bottom.*
 
@@ -213,7 +216,7 @@ is public too: [github.com/dafarusd/gate](https://github.com/dafarusd/gate)
 ## Withdrawn versions
 
 **2.0.0, 2.1.0 and 2.3.0 have been removed.** If you are running any of them,
-uninstall it before installing 2.3.1 — Android will refuse the update
+uninstall it before installing 2.3.2 — Android will refuse the update
 otherwise, and will not tell you why.
 
 All three were signed with Android's **debug key** — a key that ships
@@ -228,17 +231,17 @@ file fell back to the debug key when the release key wasn't on the machine, so
 a release build produced a debug-signed APK that looked fine. That fallback is
 gone: a release build without the key now fails instead.
 
-2.1.3, 2.2.0 and 2.3.1 are signed with a real key held only by me. Because the
+2.1.3, 2.2.0, 2.3.1 and 2.3.2 are signed with a real key held only by me. Because the
 signature is different, Android will not install them over a debug-signed one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.3.1.
+2. Install 2.3.2.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.3.1.apk
+apksigner verify --print-certs agent-ultra-2.3.2.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint
