@@ -96,12 +96,26 @@ which model it was.
 
 ## Download
 
-**[agent-ultra-2.3.2.apk](https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.2/agent-ultra-2.3.2.apk)** — 8.3 MB, free, no account.
+**[agent-ultra-2.4.0.apk](https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.4.0/agent-ultra-2.4.0.apk)** — 8.4 MB, free, no account.
+
+2.4.0: the confirm question now shows on top of the app you're in. Before, asking pulled you
+out of the app, the app forgot what was selected, and a delete you had approved never happened.
+It also reads a screen by its words instead of by numbered boxes, sees what a screen shows and
+not only what can be tapped, can press and hold, and finds a row in a long list by itself. Say
+"no, that's wrong" and it takes back what that run taught it.
+
+Measured on AndroidWorld, Google's public phone benchmark — it sets the task and checks the
+phone, nothing of mine grades. 33 simpler tasks picked by rule, details it had never seen: 8 done
+on its own, 13 when it was given steps from one checked run by a stronger model. That stronger
+model scores 13 and 14. No model was retrained. The memory that keeps those steps runs on my
+laptop beside an emulator, so the download can't learn them by itself yet. Every round, with the
+guess I wrote down before it:
+[androidworld-results.md](https://github.com/dafarusd/Ultra-Agent/blob/native/ultra-native/tools/androidworld-results.md).
 
 2.3.2: the safety gate now matches what you named as a whole word. Before, naming
 `alice@example.com` also let `ce@example.com` through.
 
-*Running 2.2.0 or 2.3.1? Install straight over — same signing key. Running 2.0.0, 2.1.0
+*Running 2.2.0, 2.3.1 or 2.3.2? Install straight over — same signing key. Running 2.0.0, 2.1.0
 or 2.3.0? Uninstall first — see [withdrawn versions](#withdrawn-versions) at
 the bottom.*
 
@@ -185,6 +199,11 @@ capabilities the phone is currently refusing.
 
 ## Honest limits
 
+- 2.4.0 installs over 2.3.2 on my Galaxy A15, launches and drives apps there. The
+  on-top confirm question has only been exercised on an emulator so far, and the benchmark
+  runs are emulator runs too.
+  20 of those 33 benchmark tasks still fail. Camera tasks and calendar grids are two of them;
+  picking one file out of look-alikes is another.
 - In-app navigation handles direct tasks well and still struggles with long
   multi-step flows inside unfamiliar apps. Teaching it a route is the reliable
   path; asking it to work out something new in an app it has never seen is not.
@@ -216,7 +235,7 @@ is public too: [github.com/dafarusd/gate](https://github.com/dafarusd/gate)
 ## Withdrawn versions
 
 **2.0.0, 2.1.0 and 2.3.0 have been removed.** If you are running any of them,
-uninstall it before installing 2.3.2 — Android will refuse the update
+uninstall it before installing 2.4.0 — Android will refuse the update
 otherwise, and will not tell you why.
 
 All three were signed with Android's **debug key** — a key that ships
@@ -231,17 +250,17 @@ file fell back to the debug key when the release key wasn't on the machine, so
 a release build produced a debug-signed APK that looked fine. That fallback is
 gone: a release build without the key now fails instead.
 
-2.1.3, 2.2.0, 2.3.1 and 2.3.2 are signed with a real key held only by me. Because the
+2.1.3, 2.2.0, 2.3.1, 2.3.2 and 2.4.0 are signed with a real key held only by me. Because the
 signature is different, Android will not install them over a debug-signed one:
 
 1. Uninstall Agent Ultra.
-2. Install 2.3.2.
+2. Install 2.4.0.
 3. Set your allowed apps and provider again — uninstalling clears them.
 
 You can check any build you download:
 
 ```
-apksigner verify --print-certs agent-ultra-2.3.2.apk
+apksigner verify --print-certs agent-ultra-2.4.0.apk
 ```
 
 It should read `CN=Dafarus, OU=Agent Ultra` with SHA-256 fingerprint

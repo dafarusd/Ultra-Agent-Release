@@ -109,10 +109,10 @@
       handset and drives the real thing — the browser, the settings, other apps' screens.
       Airplane mode, Wi-Fi off, no SIM: it still answers, and it still operates the phone.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.2/agent-ultra-2.3.2.apk">Download the APK</a>
+      <a class="btn btn-primary" href="https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.4.0/agent-ultra-2.4.0.apk">Download the APK</a>
       <a class="btn btn-ghost" href="https://x.com/Dafarusd">Built by @Dafarusd</a>
     </div>
-    <div class="meta">8.3 MB · Android 8.0+ · arm64 · free · no account</div>
+    <div class="meta">8.4 MB · Android 8.0+ · arm64 · free · no account</div>
       <div class="meta" style="margin-top:10px;max-width:52ch;line-height:1.55">
         Android will warn you four times, because this did not come from the Play
         Store. The last warning says <em>App blocked to protect your device</em> and
@@ -126,6 +126,38 @@
 
 <section>
   <div class="wrap">
+    <div class="eyebrow">New in 2.4</div>
+    <h2>Show it a job once. It can do it again with your details.</h2>
+    <p class="sub">A stronger model does the task one time. Something outside the app checks the phone
+      to see whether it really worked. If it did, the steps are kept. After that a cheaper model gets
+      the same job with different details — another file name, another time — and the app plays the
+      steps itself.</p>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Scored by someone else</h3>
+        <p>AndroidWorld is Google's public phone benchmark. It sets the task and checks the phone
+           afterwards. 33 of its simpler tasks, picked by rule, with details it had never seen:
+           8 done without the kept steps, 13 with them. The stronger model that taught it scores
+           13 and 14.</p>
+      </div>
+      <div class="card">
+        <h3>No retraining</h3>
+        <p>No model was changed. What it learned is a short list of steps in a plain file. On most
+           jobs it has steps for, the model picks nothing — the app does the taps, in 14 to 26
+           seconds.</p>
+      </div>
+      <div class="card">
+        <h3>Not in your download yet</h3>
+        <p>The memory that keeps the steps lives on my laptop, beside an emulator. The app you
+           download can play steps; nothing on your phone writes them yet. And 20 of those 33
+           tasks still fail either way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <div class="eyebrow">What is different</div>
     <h2>Your phone is a drawer full of apps, and you are the glue.</h2>
     <p class="sub">You read a screen here, retype it there, tap through five flows to do one thing you
@@ -135,7 +167,7 @@
       <div class="card">
         <h3>The brain is on the handset</h3>
         <p>Pick a model that fits your phone and it downloads on demand. Nothing is bundled — the
-           app itself is 8.3 MB. With no network it keeps working.</p>
+           app itself is 8.4 MB. With no network it keeps working.</p>
       </div>
       <div class="card">
         <h3>It reads a page properly</h3>
@@ -145,7 +177,8 @@
       <div class="card">
         <h3>It stops before it commits</h3>
         <p>Pay, buy, send, delete, confirm — those pause and ask you, showing the exact control.
-           An unanswered prompt is a refusal, never an approval.</p>
+           An unanswered prompt is a refusal, never an approval. In 2.4 the question sits on top
+           of the app you're in, so the app keeps its place while you decide.</p>
       </div>
     </div>
   </div>
@@ -213,8 +246,9 @@
         cannot be sidestepped.</li>
       <li><b>It cannot pass your fingerprint or PIN.</b> Anything behind one ends with the phone in
         your hand. That is deliberate.</li>
-      <li><b>Long flows in unfamiliar apps still trip it.</b> Direct tasks are reliable; deep
-        multi-step navigation inside an app it has never seen is not, yet.</li>
+      <li><b>Long flows in unfamiliar apps still trip it.</b> On AndroidWorld it finishes 8 of 33
+        simpler tasks on its own and 13 with steps it was shown. Camera tasks and calendar grids
+        still fail. So does picking one file out of look-alikes.</li>
       <li><b>Some apps refuse accessibility outright.</b> That is their choice and it is not worked
         around.</li>
     </ul>
@@ -235,10 +269,14 @@
         <li>The amount you asked for, checked against the screen before anything commits</li>
         <li>Task memory that recalls across rewordings</li>
         <li>Risk-based auto-approve — safe, low-risk actions pass without a tap</li>
+        <li>The confirm question shows on top of the app, so a selection survives it</li>
+        <li>Reads a screen by its words, and finds a row in a long list by itself</li>
+        <li>Tell it “no, that's wrong” and it takes back what that run taught it</li>
       </ul></div>
       <div class="col next"><h3>Next</h3><ul>
         <li>Structured fields that are labelled, not just ordered</li>
         <li>Reliable multi-step flows inside unfamiliar apps</li>
+        <li>Learning a job from one checked run, on the phone itself — it works on the bench today</li>
         <li>Triggers — a routine that fires on place or event</li>
         <li>A media toolset: find, sort and tidy your photos</li>
       </ul></div>
@@ -282,9 +320,9 @@
 
 <footer>
   <div class="wrap">
-    <a class="btn btn-primary" href="https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.3.2/agent-ultra-2.3.2.apk">Download the APK</a>
+    <a class="btn btn-primary" href="https://github.com/dafarusd/Ultra-Agent-Release/releases/download/v2.4.0/agent-ultra-2.4.0.apk">Download the APK</a>
     <div class="rule" style="margin-top:22px">
-      Android 8.0+ · arm64 · 8.3 MB · free, no account.
+      Android 8.0+ · arm64 · 8.4 MB · free, no account.
       Allow the install when Android asks, then choose which apps it may enter.
     </div>
     <div class="rule" style="margin-top:18px">
